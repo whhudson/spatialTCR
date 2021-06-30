@@ -1,0 +1,105 @@
+Analysis date: Tue Jun 22 10:10:52 EDT 2021
+Input file(s): pt16_downsample_L001_R2_001.fastq.gz
+Output file(s): output/clones.vdjca
+Version: 3.0.13; built=Wed Apr 15 11:28:14 EDT 2020; rev=f614226; lib=repseqio.v1.6
+Command line arguments: -OallowPartialAlignments=true --species hsa --library default --threads 16 --report output/clones.report -p rna-seq -OvParameters.geneFeatureToAlign=VTranscriptWithP -OsaveOriginalReads=true pt16_downsample_L001_R2_001.fastq.gz output/clones.vdjca
+Analysis time: 12.68s
+Total sequencing reads: 100000
+Successfully aligned reads: 5799 (5.8%)
+Alignment failed, no hits (not TCR/IG?): 24972 (24.97%)
+Alignment failed because of absence of CDR3 parts: 122 (0.12%)
+Alignment failed because of low total score: 69107 (69.11%)
+Overlapped: 0 (0%)
+Overlapped and aligned: 0 (0%)
+Alignment-aided overlaps: 0 (NaN%)
+Overlapped and not aligned: 0 (0%)
+TRB chains: 2664 (45.94%)
+IGH chains: 33 (0.57%)
+IGK chains: 2863 (49.37%)
+IGL chains: 239 (4.12%)
+Realigned with forced non-floating bound: 0 (0%)
+Realigned with forced non-floating right bound in left read: 0 (0%)
+Realigned with forced non-floating left bound in right read: 0 (0%)
+======================================
+Analysis date: Tue Jun 22 10:11:05 EDT 2021
+Input file(s): output/clones.vdjca
+Output file(s): output/clones.rescued_0.vdjca
+Version: 3.0.13; built=Wed Apr 15 11:28:14 EDT 2020; rev=f614226; lib=repseqio.v1.6
+Command line arguments: --report output/clones.report output/clones.vdjca output/clones.rescued_0.vdjca
+Analysis time: 442.00ms
+Total alignments analysed: 5799
+Number of output alignments: 5799 (100%)
+Alignments already with CDR3 (no overlapping is performed): 5016 (86.5%)
+Successfully overlapped alignments: 0 (0%)
+Left parts with too small N-region (failed to extract k-mer): 2 (0.03%)
+Extracted k-mer diversity: 28009
+Dropped due to wildcard in k-mer: 0 (0%)
+Dropped due to too short NRegion parts in overlap: 0 (0%)
+Dropped overlaps with empty N region due to no complete NDN coverage: 0 (0%)
+Number of left-side alignments: 691 (11.92%)
+Number of right-side alignments: 90 (1.55%)
+Complex overlaps: 0 (0%)
+Over-overlaps: 0 (0%)
+Partial alignments written to output: 783 (13.5%)
+======================================
+Analysis date: Tue Jun 22 10:11:05 EDT 2021
+Input file(s): output/clones.rescued_0.vdjca
+Output file(s): output/clones.rescued_1.vdjca
+Version: 3.0.13; built=Wed Apr 15 11:28:14 EDT 2020; rev=f614226; lib=repseqio.v1.6
+Command line arguments: --report output/clones.report output/clones.rescued_0.vdjca output/clones.rescued_1.vdjca
+Analysis time: 300.00ms
+Total alignments analysed: 5799
+Number of output alignments: 5799 (100%)
+Alignments already with CDR3 (no overlapping is performed): 5016 (86.5%)
+Successfully overlapped alignments: 0 (0%)
+Left parts with too small N-region (failed to extract k-mer): 2 (0.03%)
+Extracted k-mer diversity: 28009
+Dropped due to wildcard in k-mer: 0 (0%)
+Dropped due to too short NRegion parts in overlap: 0 (0%)
+Dropped overlaps with empty N region due to no complete NDN coverage: 0 (0%)
+Number of left-side alignments: 691 (11.92%)
+Number of right-side alignments: 90 (1.55%)
+Complex overlaps: 0 (0%)
+Over-overlaps: 0 (0%)
+Partial alignments written to output: 783 (13.5%)
+======================================
+Analysis date: Tue Jun 22 10:11:06 EDT 2021
+Input file(s): output/clones.rescued_1.vdjca
+Output file(s): output/clones.extended.vdjca
+Version: 3.0.13; built=Wed Apr 15 11:28:14 EDT 2020; rev=f614226; lib=repseqio.v1.6
+Command line arguments: --report output/clones.report --threads 16 output/clones.rescued_1.vdjca output/clones.extended.vdjca
+Analysis time: 130.00ms
+Extended alignments count: 0 (0%)
+V extensions total: 0 (0%)
+V extensions with merged targets: 0 (0%)
+J extensions total: 0 (0%)
+J extensions with merged targets: 0 (0%)
+V+J extensions: 0 (0%)
+Mean V extension length: NaN
+Mean J extension length: NaN
+======================================
+Analysis date: Tue Jun 22 10:11:06 EDT 2021
+Input file(s): output/clones.extended.vdjca
+Output file(s): output/clones.clns
+Version: 3.0.13; built=Wed Apr 15 11:28:14 EDT 2020; rev=f614226; lib=repseqio.v1.6
+Command line arguments: --report output/clones.report --threads 16 -OseparateByV=true -OseparateByJ=true --write-alignments output/clones.extended.vdjca output/clones.clns
+Analysis time: 1.90s
+Final clonotype count: 357
+Average number of reads per clonotype: 12.22
+Reads used in clonotypes, percent of total: 4363 (4.36%)
+Reads used in clonotypes before clustering, percent of total: 4445 (4.45%)
+Number of reads used as a core, percent of used: 4087 (91.95%)
+Mapped low quality reads, percent of used: 358 (8.05%)
+Reads clustered in PCR error correction, percent of used: 82 (1.84%)
+Reads pre-clustered due to the similar VJC-lists, percent of used: 307 (7.04%)
+Reads dropped due to the lack of a clone sequence, percent of total: 783 (0.78%)
+Reads dropped due to low quality, percent of total: 7 (0.01%)
+Reads dropped due to failed mapping, percent of total: 564 (0.56%)
+Reads dropped with low quality clones, percent of total: 0 (0%)
+Clonotypes eliminated by PCR error correction: 61
+Clonotypes dropped as low quality: 0
+Clonotypes pre-clustered due to the similar VJC-lists: 73
+TRB chains: 119 (33.33%)
+IGK chains: 190 (53.22%)
+IGL chains: 48 (13.45%)
+======================================
